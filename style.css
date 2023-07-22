@@ -8,28 +8,42 @@ body {
     overflow: hidden;
 }
 
+button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+
 #static,
 #dynamic,
-#game-window {
+#game-window,
+#UI {
+    font-family: fantasy;
     position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-}
-
-#game-window {
-    background: linear-gradient(to bottom, #00ccff 0%, #b1e2fc 50%);
-}
-
-#score {
     font-family: fantasy;
     padding: 20px;
     font-size: 5vw;
     text-shadow: 0px 0px 3px red;
-    position: absolute;
     z-index: 10;
+}
+
+#restart {
+    display: none;
+}
+
+#gameover {
+    text-align: center;
+    display: none;
+}
+
+#game-window {
+    background: linear-gradient(to bottom, #00ccff 0%, #b1e2fc 50%);
 }
 
 #man {

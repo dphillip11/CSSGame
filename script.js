@@ -2,6 +2,7 @@ var actionInterval = 0.5;
 var actionTime = 0;
 var isDoingAction = false;
 var isSlashing = false;
+var isPlaying = false;
     
 var score = 0;
 var health = 3;
@@ -114,7 +115,7 @@ function playHurtAnimation()
 }
 
 window.addEventListener('keydown', function (event) {
-    if (isDoingAction) {
+    if (isDoingAction || !isPlaying) {
         return;
     }
     if (event.key == 'w') {
@@ -132,6 +133,12 @@ window.addEventListener('keydown', function (event) {
     }
     isDoingAction = true;
 }, false);
+
+var startButton = document.getElementById("start");
+startButton.addEventListener('click', startGame, false); 
+var restartButton = document.getElementById("restart");
+restartButton.addEventListener('click', startGame, false);
+var gameOver = document.getElementById("gameover");
 
 
 function UpdateMan(dt) {
@@ -157,20 +164,26 @@ function checkCollisions() {
     if (isSlashing && checkCollision(hurtbox, bitcoinHitbox)) {
         ChangeScore(5);
         ResetPosition(launchedObject);
+        LaunchObject();
     }
 }
         
 
 function GameOver() {
+    gameOver.style.display = "block";
+    restartButton.style.display = "block";
+    isPlaying = false;
 }
 
 function updateGame(dt) {
     if (health <= 0) {
         GameOver();
     }
-    UpdateMan(dt);
-    checkCollisions();
-    moveLaunchedObject(movementSpeed * dt);
+    if (isPlaying) {
+        UpdateMan(dt);
+        checkCollisions();
+        moveLaunchedObject(movementSpeed * dt);
+    }
 }
 
 var previousTime = Date.now();
@@ -183,5 +196,12 @@ function gameLoop() {
     requestAnimationFrame(gameLoop);
 }
 
-LaunchObject();
-gameLoop();
+function startGame() {
+    gameOver.style.display = "none";
+    startButton.style.display = "none";
+    restartButton.style.display = "none";
+    isPlaying = true;
+    ResetGame();
+    LaunchObject();
+    gameLoop();
+}
