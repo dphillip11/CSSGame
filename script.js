@@ -1,3 +1,9 @@
+var DEBUG = false;
+
+if (DEBUG) {
+    document.documentElement.style.setProperty('--border-color', 'red');
+}
+
 var actionInterval = 0.5;
 var actionTime = 0;
 var isDoingAction = false;
