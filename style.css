@@ -52,7 +52,7 @@ button {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("Textures/man_stand.png");
+    background-image: url("Textures/man_stand.webp");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     z-index: 2;
@@ -161,7 +161,7 @@ button {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("Textures/land.png");
+    background-image: url("Textures/land.webp");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     z-index: 1;
@@ -174,7 +174,7 @@ button {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("Textures/waves.png");
+    background-image: url("Textures/waves.webp");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     z-index: 0;
@@ -182,7 +182,7 @@ button {
 }
 
 #wave_front {
-    background-image: url("Textures/wavesFront.png");
+    background-image: url("Textures/wavesFront.webp");
     animation: wavesFront 3s linear infinite;
     z-index: 10;
 
@@ -226,7 +226,7 @@ button {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("Textures/cloud.png");
+    background-image: url("Textures/cloud.webp");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     /* scroll from left to right infinitely */
@@ -240,7 +240,7 @@ button {
     left: 0;
     width: 70%;
     height: 70%;
-    background-image: url("Textures/cloud.png");
+    background-image: url("Textures/cloud.webp");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     /* scroll from left to right infinitely */
@@ -273,7 +273,7 @@ button {
     left: 0;
     width: 25%;
     height: 25%;
-    background-image: url("Textures/whale.png");
+    background-image: url("Textures/whale.webp");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     z-index: 5;
@@ -285,7 +285,7 @@ button {
     left: 0;
     width: 10%;
     height: 10%;
-    background-image: url("Textures/water_big.png");
+    background-image: url("Textures/water_big.webp");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     z-index: 20;
@@ -298,11 +298,11 @@ button {
     }
 
     30% {
-        background-image: url("Textures/water_small.png");
+        background-image: url("Textures/water_small.webp");
     }
 
     60% {
-        background-image: url("Textures/water_big.png");
+        background-image: url("Textures/water_big.webp");
     }
 }
 
@@ -312,7 +312,7 @@ button {
     left: 110%;
     width: 10%;
     height: 10%;
-    background-image: url("Textures/seagull.png");
+    background-image: url("Textures/seagull.webp");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     z-index: 5;
@@ -326,7 +326,7 @@ button {
     left: 110%;
     width: 4%;
     height: 4%;
-    background-image: url("Textures/bitcoin.png");
+    background-image: url("Textures/bitcoin.webp");
     background-size: 100% 100%;
     z-index: 100;
 }

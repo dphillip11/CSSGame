@@ -119,16 +119,16 @@ window.addEventListener('keydown', function (event) {
         return;
     }
     if (event.key == 'w') {
-        man.style.backgroundImage = 'url("Textures/man_jump.png")';
+        man.style.backgroundImage = 'url("Textures/man_jump.webp")';
         manHitbox.classList.add("jumping");
     }
     else if (event.key == 'd') {
-        man.style.backgroundImage = 'url("Textures/man_hit.png")';
+        man.style.backgroundImage = 'url("Textures/man_hit.webp")';
         hurtbox.style.display = "block";
         isSlashing = true;
     }
     else if (event.key == 's') {
-        man.style.backgroundImage = 'url("Textures/man_duck.png")';
+        man.style.backgroundImage = 'url("Textures/man_duck.webp")';
         manHitbox.classList.add("ducking");
     }
     isDoingAction = true;
@@ -148,7 +148,7 @@ function UpdateMan(dt) {
             actionTime = 0;
             isDoingAction = false;
             isSlashing = false;
-            man.style.backgroundImage = 'url("Textures/man_stand.png")';
+            man.style.backgroundImage = 'url("Textures/man_stand.webp")';
             manHitbox.classList.remove("jumping");
             manHitbox.classList.remove("ducking");
             hurtbox.style.display = "none";
