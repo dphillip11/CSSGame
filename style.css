@@ -10,8 +10,18 @@ body {
 
 button {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    left: 35vw;
+    top: 45%;
+    width: 30vw;
+    height: 10vw;
+    font-family: fantasy;
+    font-size: 5vw;
+    text-shadow: 0px 0px 3px red;
+}
+
+button:hover {
+    background-color: #00ccff;
+    color: white;
 }
 
 
@@ -27,7 +37,6 @@ button {
     height: 100vh;
     overflow: hidden;
     font-family: fantasy;
-    padding: 20px;
     font-size: 5vw;
     text-shadow: 0px 0px 3px red;
     z-index: 10;
@@ -232,6 +241,10 @@ button {
     /* scroll from left to right infinitely */
     animation: cloud 10s linear infinite;
     z-index: 1;
+}
+
+#score {
+    padding: 20px;
 }
 
 #cloud2 {
