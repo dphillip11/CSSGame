@@ -193,7 +193,7 @@ button:hover {
 #wave_front {
     background-image: url("Textures/wavesFront.webp");
     animation: wavesFront 3s linear infinite;
-    z-index: 10;
+    z-index: 100;
 
 }
 
