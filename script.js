@@ -6,6 +6,8 @@ function showDebug() {
     }
 }
 
+showDebug();
+
 var actionInterval = 0.5;
 var actionTime = 0;
 var isDoingAction = false;
@@ -44,6 +46,7 @@ var man = document.getElementById("man");
 var whale = document.getElementById("whale");
 var seagull = document.getElementById("seagull");
 var bitcoin = document.getElementById("bitcoin");
+var brokenBitcoin = document.getElementById("broken-bitcoin");
 
 function ResetPosition(object)
 {
@@ -71,7 +74,7 @@ var launchedObject;
 var movementSpeed = 50;
 
 function SetRandomMovementSpeed() {
-    movementSpeed = GetRandom(50, 150);
+    movementSpeed = 80 + GetRandom(0, score / 10);
 }
 
 function LaunchObject() {
@@ -88,7 +91,7 @@ function moveLaunchedObject(distance) {
     var x = launchedObject.style.left = parseFloat(launchedObject.style.left) || 110;
     x -= distance;
     launchedObject.style.left = x + "%";
-    if (x < -10) {
+    if (x < -50) {
         ResetPosition(launchedObject);
         LaunchObject();
         if (launchedObject != bitcoin) {
@@ -98,7 +101,7 @@ function moveLaunchedObject(distance) {
     }
     if (launchedObject == seagull)
     {
-        var y = 40;
+        var y = 15;
         var descent = 20 - x/2;
         if (descent > 0)
             y += descent;
@@ -155,9 +158,21 @@ function decoratedAction(action)
     isDoingAction = true;
 }
 
-function duckAction() { decoratedAction(duck); }
-function jumpAction() { decoratedAction(jump); }
-function slashAction() { decoratedAction(slash); }
+function duckAction(event) {
+    if(event)
+        event.preventDefault();
+    decoratedAction(duck);
+}
+function jumpAction(event) {
+    if(event)
+        event.preventDefault();
+    decoratedAction(jump);
+}
+function slashAction(event) {
+    if(event)
+        event.preventDefault();
+    decoratedAction(slash);
+}
 
 var slashButton = document.getElementById("slash");
 var jumpButton = document.getElementById("jump");
@@ -187,7 +202,6 @@ function ToggleHelp()
 helpButton.addEventListener('click', function() {
     ToggleHelp();
 }, false);
-
 
 
 window.addEventListener('keydown', function (event) {
@@ -230,8 +244,9 @@ function checkCollisions() {
     }
     if (isSlashing && checkCollision(hurtbox, bitcoinHitbox)) {
         ChangeScore(5);
+        brokenBitcoin.style.left = bitcoin.style.left;
         ResetPosition(launchedObject);
-        LaunchObject();
+        launchedObject = brokenBitcoin;
     }
 }
         
