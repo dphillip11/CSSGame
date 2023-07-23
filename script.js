@@ -131,18 +131,18 @@ function playHurtAnimation()
 }
 
 function jump() {
-    man.style.backgroundImage = 'url("Textures/man_jump.webp")';
+    man.style.backgroundImage = 'url("Textures/man_jump.png")';
     manHitbox.classList.add("jumping");
 }
 
 function slash() {
-    man.style.backgroundImage = 'url("Textures/man_hit.webp")';
+    man.style.backgroundImage = 'url("Textures/man_hit.png")';
     hurtbox.style.display = "block";
     isSlashing = true;
 }
 
 function duck() {
-    man.style.backgroundImage = 'url("Textures/man_duck.webp")';
+    man.style.backgroundImage = 'url("Textures/man_duck.png")';
     manHitbox.classList.add("ducking");
 }
 
@@ -209,7 +209,7 @@ function UpdateMan(dt) {
             actionTime = 0;
             isDoingAction = false;
             isSlashing = false;
-            man.style.backgroundImage = 'url("Textures/man_stand.webp")';
+            man.style.backgroundImage = 'url("Textures/man_stand.png")';
             manHitbox.classList.remove("jumping");
             manHitbox.classList.remove("ducking");
             hurtbox.style.display = "none";
