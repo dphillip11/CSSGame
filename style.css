@@ -9,14 +9,18 @@ body {
 }
 
 button {
-    position: absolute;
-    left: 35vw;
-    top: 20%;
+    margin: 10px;
     width: 30vw;
     height: 10vw;
     font-family: fantasy;
     font-size: 5vw;
     text-shadow: 0px 0px 3px red;
+}
+
+.centred {
+    position: fixed;
+    left: 35vw;
+    top: 15vh;
 }
 
 button:hover {
@@ -337,8 +341,12 @@ button:hover {
 }
 
 #helpText {
-    text-align: center;
-    padding-top: 5vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 25vh;
+    margin: auto;
+    color: rgba(1, 0, 0, 0);
 }
 
 #jump {
@@ -357,10 +365,31 @@ button:hover {
 
 #help {
     position: absolute;
-    top: 0;
-    left: 70vw;
+    top: 2vh;
+    right: 2vw;
     width: 25vw;
     height: 10vw;
+}
+
+.heart {
+    background-image: url("Textures/heart.png");
+    background-size: 100px 100px;
+    background-repeat: no-repeat;
+    /* image should fill space */
+    background-size: cover;
+    width: 10vh;
+    height: 10vh;
+}
+
+#heart-container {
+    position: absolute;
+    top: 2vh;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
 }
 
 .hidden {
@@ -368,4 +397,8 @@ button:hover {
     background-color: rgba(0, 0, 0, 0);
     color: rgba(0, 0, 0, 0);
     text-shadow: none;
+}
+
+.red {
+    color: red;
 }

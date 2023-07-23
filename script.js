@@ -1,7 +1,9 @@
 var DEBUG = false;
 
-if (DEBUG) {
-    document.documentElement.style.setProperty('--border-color', 'red');
+function showDebug() {
+    if (DEBUG) {
+        document.documentElement.style.setProperty('--border-color', 'red');
+    }
 }
 
 var actionInterval = 0.5;
@@ -21,9 +23,17 @@ function ChangeScore(amount) {
     scoreText.innerHTML = "Score: " + score;
 }
 
+var hearts = document.querySelectorAll(".heart");
+
 function ChangeHealth(amount) {
-    health += amount;
-    healthText.innerHTML = "Health: " + health;
+  health += amount;
+  hearts.forEach(function(heart, index) {
+    if (index < health) {
+      heart.style.display = "block";
+    } else {
+      heart.style.display = "none";
+    }
+  });
 }
 
 function GetRandom(min, max) {
