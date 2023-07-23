@@ -78,7 +78,7 @@ var launchedObject;
 var movementSpeed = 50;
 
 function SetRandomMovementSpeed() {
-    movementSpeed = 80 + GetRandom(0, score / 10);
+    movementSpeed = 80 + GetRandom(0, score / 4);
 }
 
 function LaunchObject() {
@@ -153,29 +153,25 @@ function duck() {
     manHitbox.classList.add("ducking");
 }
 
-function decoratedAction(action)
+function decoratedAction(action, event)
 {
     if (isDoingAction || !isPlaying) {
         return;
     }
+    if(event)
+        event.preventDefault();
     action();
     isDoingAction = true;
 }
 
 function duckAction(event) {
-    if(event)
-        event.preventDefault();
-    decoratedAction(duck);
+    decoratedAction(duck, event);
 }
 function jumpAction(event) {
-    if(event)
-        event.preventDefault();
-    decoratedAction(jump);
+    decoratedAction(jump, event);
 }
 function slashAction(event) {
-    if(event)
-        event.preventDefault();
-    decoratedAction(slash);
+    decoratedAction(slash, event);
 }
 
 var slashButton = document.getElementById("slash");
