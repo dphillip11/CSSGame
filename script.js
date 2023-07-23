@@ -171,14 +171,21 @@ jumpButton.addEventListener('touchstart', jumpAction, false);
 duckButton.addEventListener('touchstart', duckAction, false);
 
 var touchControls = document.querySelectorAll(".touch_control");
-var helpButton = document.getElementById("help");
-var helpText = document.getElementById("helpText");
+var helpButton = document.getElementById("help-button");
+var helpShowing = false;
+var notificationText = document.getElementById("notification");
+
+function ToggleHelp()
+{
+    touchControls.forEach(function(touchControl) {
+    touchControl.classList.toggle("hidden");
+    });
+    helpShowing = !helpShowing;
+    notificationText.innerText = helpShowing ? "Tap, click or press the keys to play" : "";
+}
 
 helpButton.addEventListener('click', function() {
-  touchControls.forEach(function(touchControl) {
-    touchControl.classList.toggle("hidden");
-  });
-    helpText.classList.toggle("hidden");
+    ToggleHelp();
 }, false);
 
 
@@ -195,11 +202,10 @@ window.addEventListener('keydown', function (event) {
     }
 }, false);
 
-var startButton = document.getElementById("start");
+var startButton = document.getElementById("start-button");
 startButton.addEventListener('click', startGame, false); 
-var restartButton = document.getElementById("restart");
+var restartButton = document.getElementById("restart-button");
 restartButton.addEventListener('click', startGame, false);
-var gameOver = document.getElementById("gameover");
 
 
 function UpdateMan(dt) {
@@ -231,7 +237,7 @@ function checkCollisions() {
         
 
 function GameOver() {
-    gameOver.style.display = "block";
+    notificationText.innerText = "Game Over";
     restartButton.style.display = "block";
     isPlaying = false;
 }
@@ -258,7 +264,10 @@ function gameLoop() {
 }
 
 function startGame() {
-    gameOver.style.display = "none";
+    if (helpShowing) {
+        ToggleHelp();
+    }
+    notificationText.innerText = "";
     startButton.style.display = "none";
     restartButton.style.display = "none";
     isPlaying = true;

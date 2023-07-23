@@ -31,24 +31,25 @@
         <div id="wave_front"></div>
     </div>
     <div id="UI">
-        <div id="heart-container">
-            <div class="heart"></div>
-            <div class="heart"></div>
-            <div class="heart"></div>
+        <div id="top-bar">
+            <div id="score">Score: 0</div>
+            <div id="heart-container">
+                <div class="heart"></div>
+                <div class="heart"></div>
+                <div class="heart"></div>
+            </div>
+            <div class="button" id="help-button">Help</div>
         </div>
-        <div id="score">Score: 0</div>
-        <div id="gameover">Game Over</div>
-        <div id="helpText" class="hidden">
-            <div id="text-box">TAP, CLICK, OR PRESS THE KEYS TO PLAY</div>
+        <div id="touch-controls">
+            <div class="touch_control hidden" id="jump">JUMP[W]</div>
+            <div class="touch_control hidden" id="duck">DUCK[S]</div>
+            <div class="touch_control hidden" id="slash">SLASH[D]</div>
         </div>
-        <button class="centred" id="start">Start</button>
-        <button class="centred" id="restart">Restart</button>
-        <button id="help">Help</button>
-    </div>
-    <div id="touch-controls">
-        <div class="touch_control hidden" id="jump">JUMP[W]</div>
-        <div class="touch_control hidden" id="duck">DUCK[S]</div>
-        <div class="touch_control hidden" id="slash">SLASH[D]</div>
+        <div id="notification-bar">
+            <div id="notification"></div>
+            <div class="button" id="start-button">Start</div>
+            <div class="button" id="restart-button">Restart</div>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
