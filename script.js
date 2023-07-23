@@ -8,6 +8,8 @@ function showDebug() {
 
 showDebug();
 
+var previousTime = Date.now();
+
 var actionInterval = 0.5;
 var actionTime = 0;
 var isDoingAction = false;
@@ -61,6 +63,8 @@ function ResetGame() {
     ResetPosition(whale);
     ResetPosition(seagull);
     ResetPosition(bitcoin);
+    ResetPosition(brokenBitcoin);
+    previousTime = Date.now(); 
 }
 
 var manHitbox = document.getElementById("man_hitbox");
@@ -93,10 +97,10 @@ function moveLaunchedObject(distance) {
     launchedObject.style.left = x + "%";
     if (x < -50) {
         ResetPosition(launchedObject);
-        LaunchObject();
         if (launchedObject != bitcoin) {
             ChangeScore(1);
         }
+        LaunchObject();
         return;
     }
     if (launchedObject == seagull)
@@ -267,8 +271,6 @@ function updateGame(dt) {
         moveLaunchedObject(movementSpeed * dt);
     }
 }
-
-var previousTime = Date.now();
 
 function gameLoop() {
     var currentTime = Date.now();
