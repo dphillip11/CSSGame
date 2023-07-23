@@ -120,24 +120,69 @@ function playHurtAnimation()
     man.classList.add("hurting");
 }
 
-window.addEventListener('keydown', function (event) {
+function jump() {
+    man.style.backgroundImage = 'url("Textures/man_jump.webp")';
+    manHitbox.classList.add("jumping");
+}
+
+function slash() {
+    man.style.backgroundImage = 'url("Textures/man_hit.webp")';
+    hurtbox.style.display = "block";
+    isSlashing = true;
+}
+
+function duck() {
+    man.style.backgroundImage = 'url("Textures/man_duck.webp")';
+    manHitbox.classList.add("ducking");
+}
+
+function decoratedAction(action)
+{
     if (isDoingAction || !isPlaying) {
         return;
     }
+    action();
+    isDoingAction = true;
+}
+
+function duckAction() { decoratedAction(duck); }
+function jumpAction() { decoratedAction(jump); }
+function slashAction() { decoratedAction(slash); }
+
+var slashButton = document.getElementById("slash");
+var jumpButton = document.getElementById("jump");
+var duckButton = document.getElementById("duck");
+
+slashButton.addEventListener('click', slashAction, false);
+jumpButton.addEventListener('click', jumpAction, false);
+duckButton.addEventListener('click', duckAction, false);
+slashButton.addEventListener('touchstart', slashAction, false);
+jumpButton.addEventListener('touchstart', jumpAction, false);
+duckButton.addEventListener('touchstart', duckAction, false);
+
+var touchControls = document.querySelectorAll(".touch_control");
+var helpButton = document.getElementById("help");
+var helpText = document.getElementById("helpText");
+
+helpButton.addEventListener('click', function() {
+  touchControls.forEach(function(touchControl) {
+    touchControl.classList.toggle("hidden");
+  });
+    helpText.classList.toggle("hidden");
+}, false);
+
+
+
+window.addEventListener('keydown', function (event) {
     if (event.key == 'w') {
-        man.style.backgroundImage = 'url("Textures/man_jump.webp")';
-        manHitbox.classList.add("jumping");
+        jumpAction();
     }
     else if (event.key == 'd') {
-        man.style.backgroundImage = 'url("Textures/man_hit.webp")';
-        hurtbox.style.display = "block";
-        isSlashing = true;
+        slashAction();
     }
     else if (event.key == 's') {
-        man.style.backgroundImage = 'url("Textures/man_duck.webp")';
-        manHitbox.classList.add("ducking");
+        duckAction();
     }
-    isDoingAction = true;
 }, false);
 
 var startButton = document.getElementById("start");
