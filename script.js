@@ -18,6 +18,14 @@ var isPlaying = false;
     
 var score = 0;
 var health = 3;
+var coinPower = 0;
+var multiplier = 1;
+var x2multiplierThreshold = 8;
+var x4multiplierThreshold = 16;
+
+var x2 = document.getElementById("x2");
+var x4 = document.getElementById("x4");
+var multiplierBar = document.getElementById("multiplier-bar");
 
 var scoreText = document.getElementById("score");
 var healthText = document.getElementById("health");
@@ -38,6 +46,27 @@ function ChangeHealth(amount) {
       heart.style.display = "none";
     }
   });
+}
+
+function IncreaseCoinPower() {
+    coinPower ++;
+    if (coinPower >= x2multiplierThreshold) {
+        multiplier = 2;
+        x2.classList.add("unlocked")
+    }
+    if (coinPower >= x4multiplierThreshold) {
+        multiplier = 4;
+        x4.classList.add("unlocked")
+    }
+    var barLength = Math.min(coinPower / x4multiplierThreshold, 1);
+    multiplierBar.style.width = (barLength * 100) + "%";
+}
+
+function ResetCoinPower() {
+    coinPower = 0;
+    x2.classList.remove("unlocked");
+    x4.classList.remove("unlocked");
+    multiplierBar.style.width = "0%";
 }
 
 function GetRandom(min, max) {
@@ -64,6 +93,8 @@ function ResetGame() {
     ResetPosition(seagull);
     ResetPosition(bitcoin);
     ResetPosition(brokenBitcoin);
+    LaunchObject();
+    ResetCoinPower();
     previousTime = Date.now(); 
 }
 
@@ -78,7 +109,7 @@ var launchedObject;
 var movementSpeed = 50;
 
 function SetRandomMovementSpeed() {
-    movementSpeed = 80 + GetRandom(0, score / 4);
+    movementSpeed = 80 + GetRandom(0, (multiplier * score) / 4);
 }
 
 function LaunchObject() {
@@ -98,7 +129,10 @@ function moveLaunchedObject(distance) {
     if (x < -50) {
         ResetPosition(launchedObject);
         if (launchedObject != bitcoin) {
-            ChangeScore(1);
+            ChangeScore(1 * multiplier);
+        }
+        else {
+            ResetCoinPower();
         }
         LaunchObject();
         return;
@@ -244,6 +278,7 @@ function checkCollisions() {
     }
     if (isSlashing && checkCollision(hurtbox, bitcoinHitbox)) {
         ChangeScore(5);
+        IncreaseCoinPower();
         brokenBitcoin.style.left = bitcoin.style.left;
         ResetPosition(launchedObject);
         launchedObject = brokenBitcoin;
