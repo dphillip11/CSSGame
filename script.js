@@ -8,6 +8,13 @@ function showDebug() {
 
 showDebug();
 
+var gameWindow = document.getElementById("game-window");
+
+window.addEventListener('resize', function () {
+    gameWindow.style.height = window.innerHeight + "px";
+    gameWindow.style.width = window.innerWidth + "px";
+}, false);
+
 var previousTime = Date.now();
 
 var actionInterval = 0.5;

@@ -414,8 +414,8 @@ body {
 }
 
 #multiplier {
-    position: absolute;
-    top: 95vh;
+    position: fixed;
+    bottom: 5px;
     left: 5px;
     width: 50vw;
     height: 3px;
@@ -433,11 +433,11 @@ body {
 #multiplier-text {
     display: flex;
     justify-content: space-between;
-    position: absolute;
-    top: 90vh;
+    position: fixed;
+    bottom: 12px;
     left: 5px;
     width: 50vw;
-    font-size: 2vw;
+    font-size: 3vh;
 }
 
 .unlocked {
