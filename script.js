@@ -71,6 +71,7 @@ function IncreaseCoinPower() {
 
 function ResetCoinPower() {
     coinPower = 0;
+    multiplier = 1;
     x2.classList.remove("unlocked");
     x4.classList.remove("unlocked");
     multiplierBar.style.width = "0%";
@@ -88,7 +89,7 @@ var brokenBitcoin = document.getElementById("broken-bitcoin");
 
 function ResetPosition(object)
 {
-    object.style.left = "110%";
+    object.style.left = "130%";
     if (object == seagull)
         object.style.top = "40%";
 }
@@ -113,10 +114,12 @@ var seagullHitbox = document.getElementById("seagull_hitbox");
 var bitcoinHitbox = document.getElementById("bitcoin_hitbox");
 
 var launchedObject;
-var movementSpeed = 50;
+var baseMovementSpeed = 80;
+var maxSpeed = 200;
 
 function SetRandomMovementSpeed() {
-    movementSpeed = 80 + GetRandom(0, (multiplier * score) / 4);
+    var extraSpeed = GetRandom(0, (multiplier * score) / 4)
+    var movementSpeed = math.min(baseMovementSpeed + extraSpeed, maxSpeed);
 }
 
 function LaunchObject() {
