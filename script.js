@@ -118,6 +118,7 @@ function LaunchObject() {
         case 0: launchedObject = whale; break;
         case 1: launchedObject = seagull; break;
         case 2: launchedObject = bitcoin; break;
+        case 3: launchedObject = bitcoin; break;
     }
     SetRandomMovementSpeed();
 }
