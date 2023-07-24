@@ -1,4 +1,4 @@
-var DEBUG = false;
+var DEBUG = true;
 
 function showDebug() {
     if (DEBUG) {
@@ -9,11 +9,6 @@ function showDebug() {
 showDebug();
 
 var gameWindow = document.getElementById("game-window");
-
-window.addEventListener('resize', function () {
-    gameWindow.style.height = window.innerHeight + "px";
-    gameWindow.style.width = window.innerWidth + "px";
-}, false);
 
 var previousTime = Date.now();
 
@@ -184,19 +179,18 @@ function playHurtAnimation()
 }
 
 function jump() {
-    man.style.backgroundImage = 'url("Textures/man_jump.png")';
-    manHitbox.classList.add("jumping");
+    man.className = "sprite man-jumping";
 }
 
 function slash() {
-    man.style.backgroundImage = 'url("Textures/man_hit.png")';
+    man.className = "sprite man-slashing";
+    manHitbox.classList.add("slashing");
     hurtbox.style.display = "block";
     isSlashing = true;
 }
 
 function duck() {
-    man.style.backgroundImage = 'url("Textures/man_duck.png")';
-    manHitbox.classList.add("ducking");
+    man.className = "sprite man-ducking";
 }
 
 function decoratedAction(action, event)
@@ -275,9 +269,8 @@ function UpdateMan(dt) {
             actionTime = 0;
             isDoingAction = false;
             isSlashing = false;
-            man.style.backgroundImage = 'url("Textures/man_stand.png")';
-            manHitbox.classList.remove("jumping");
-            manHitbox.classList.remove("ducking");
+            man.className = "sprite man-standing";
+            manHitbox.className = "hitbox";
             hurtbox.style.display = "none";
         }
     }

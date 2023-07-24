@@ -3,91 +3,91 @@
     background-size: 1588 1077;
 }
 
-#heart {
+.heart {
     background-position: -387px -23px;
     width: 110px;
     height: 116px;
 }
 
-#whale {
+.whale {
     background-position: -556px -16px;
     width: 334px;
     height: 161px;
 }
 
-#big-water {
+.big-water {
     background-position: -910px -23px;
     width: 76px;
     height: 52px;
 }
 
-#small-water {
+.small-water {
     background-position: -1027px -40px;
     width: 20px;
     height: 22px;
 }
 
-#cloud {
+.cloud {
     background-position: -1152px -37px;
     height: 152px;
     width: 249px;
 }
 
-#seagull {
+.seagull {
     background-position: -374px -276px;
     height: 82px;
     width: 141px;
 }
 
-#bitcoin {
+.bitcoin {
     background-position: -797px -263px;
     height: 61px;
     width: 60px;
 }
 
-#bitcoin-broken {
+.bitcoin-broken {
     background-position: -1007px -263px;
     height: 98px;
     width: 79px;
 }
 
-#land {
+.land {
     background-position: -1118px -473px;
     width: 454px;
     height: 212px;
 }
 
-#man-standing {
+.man-standing {
     background-position: -18px -457px;
     width: 184px;
     height: 205px;
 }
 
-#man-ducking {
+.man-ducking {
     background-position: -785px -503px;
     width: 206px;
     height: 159px;
 }
 
-#man-jumping {
+.man-jumping {
     background-position: -252px -480px;
     width: 199px;
     height: 175px;
 }
 
-#man-slashing {
+.man-slashing {
     background-position: -524px -457px;
     width: 199px;
     height: 207px;
 }
 
-#waves-back {
+.waves-back {
     background-position: -27px -802px;
     width: 757px;
     height: 255px;
 }
 
-#waves-front {
+.waves-front {
     background-position: -812px -883px;
     height: 172px;
     width: 748px;
