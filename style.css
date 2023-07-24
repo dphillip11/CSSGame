@@ -44,11 +44,6 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("Textures/man_stand.png");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
 }
 
 /* flash different hues */
@@ -95,17 +90,6 @@ body {
     border: 1px solid var(--border-color);
 }
 
-.ducking {
-    height: 12.5%;
-    width: 10%;
-    top: 62.5%;
-}
-
-.jumping {
-    height: 15%;
-    width: 10%;
-    top: 45%;
-}
 
 .hurtbox {
     position: absolute;
@@ -148,28 +132,17 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("Textures/land.png");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
 }
 
-#wave_front,
-#wave_back {
+#waves-front,
+#waves-back {
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("Textures/waves.png");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
     animation: wavesBack 5s linear infinite;
 }
 
-#wave_front {
-    background-image: url("Textures/wavesFront.png");
+#waves-front {
     animation: wavesFront 3s linear infinite;
 }
 
@@ -209,12 +182,6 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("Textures/cloud.png");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    /* scroll from left to right infinitely */
     animation: cloud 10s linear infinite;
 }
 
@@ -222,12 +189,6 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 70%;
-    height: 70%;
-    background-image: url("Textures/cloud.png");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    /* scroll from left to right infinitely */
     animation: cloud 10s linear infinite;
 }
 
@@ -245,58 +206,21 @@ body {
     position: absolute;
     top: 70%;
     left: 110%;
-    width: 100%;
-    height: 100%;
-}
-
-#whale_body {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("Textures/whale.png");
-    background-size: 100% 100%;
-    background-position: -5vw -42vh;
-    background-repeat: no-repeat;
 }
 
 #water {
     position: relative;
     top: -62%;
     left: -5%;
-    width: 100%;
-    height: 100%;
-    background-image: url("Textures/water_big.png");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
     animation: water 5s linear infinite;
 }
 
-@keyframes water {
-    0% {
-        background-image: none;
-    }
-
-    30% {
-        background-image: url("Textures/water_small.png");
-    }
-
-    60% {
-        background-image: url("Textures/water_big.png");
-    }
-}
+@keyframes water {}
 
 #seagull {
     position: absolute;
     top: 0%;
     left: 110%;
-    width: 100%;
-    height: 100%;
-    background-image: url("Textures/seagull.png");
-    background-size: 100% 100%;
-    background-position: -70vw -30vh;
-    background-repeat: no-repeat;
 }
 
 
@@ -305,20 +229,12 @@ body {
     position: absolute;
     top: 42.5%;
     left: 110%;
-    width: 100%;
-    height: 100%;
-    background-image: url("Textures/bitcoin.png");
-    background-size: 100% 100%;
 }
 
 #broken-bitcoin {
     position: absolute;
     top: 42.5%;
     left: 110%;
-    width: 100%;
-    height: 100%;
-    background-image: url("Textures/bitcoinBroken.png");
-    background-size: 100% 100%;
 }
 
 .touch_control {
@@ -375,18 +291,6 @@ body {
     display: none;
 }
 
-
-.heart {
-    background-image: url("Textures/heart.png");
-    background-size: 100px 100px;
-    background-repeat: no-repeat;
-    /* image should fill space */
-    background-size: cover;
-    width: 10vw;
-    max-width: 10vh;
-    height: 10vw;
-    max-height: 10vh;
-}
 
 #heart-container {
     width: 40vw;

@@ -89,7 +89,7 @@ var brokenBitcoin = document.getElementById("broken-bitcoin");
 
 function ResetPosition(object)
 {
-    object.style.left = "130%";
+    object.style.left = "150%";
     if (object == seagull)
         object.style.top = "40%";
 }

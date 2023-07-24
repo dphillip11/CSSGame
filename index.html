@@ -4,40 +4,41 @@
 <head>
     <meta charset="utf-8">
     <title>Minigame</title>
+    <link rel="stylesheet" href="spritestyle.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div id="game-window">
-        <div id="wave_back"></div>
-        <div id="land"></div>
-        <div id="cloud2"></div>
-        <div id="cloud"></div>
-        <div id="man">
+        <div id="waves-back" class="sprite"></div>
+        <div id="land" class="sprite"></div>
+        <div id="cloud2" class="sprite"></div>
+        <div id="cloud" class="sprite"></div>
+        <div id="man" class="sprite">
             <div id="man_hitbox" class="hitbox"></div>
             <div id="man_hutbox" class="hurtbox"></div>
         </div>
-        <div id="whale">
+        <div id="whale" class="sprite">
             <div id="whale_body"></div>
             <div id="whale_hitbox"></div>
-            <div id="water"></div>
+            <div id="big-water" class="sprite"></div>
         </div>
-        <div id="seagull">
+        <div id="seagull" class="sprite">
             <div id="seagull_hitbox"></div>
         </div>
-        <div id="bitcoin">
+        <div id="bitcoin" class="sprite">
             <div id="bitcoin_hitbox"></div>
         </div>
-        <div id="broken-bitcoin"></div>
+        <div id="broken-bitcoin" class="sprite"></div>
         <div id="wave_front"></div>
     </div>
     <div id="UI">
         <div id="top-bar">
             <div id="score">Score: 0</div>
             <div id="heart-container">
-                <div class="heart"></div>
-                <div class="heart"></div>
-                <div class="heart"></div>
+                <div class="heart" class="sprite"></div>
+                <div class="heart" class="sprite"></div>
+                <div class="heart" class="sprite"></div>
             </div>
             <div class="button" id="help-button">Help</div>
         </div>
