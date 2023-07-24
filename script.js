@@ -180,6 +180,7 @@ function playHurtAnimation()
 
 function jump() {
     man.className = "sprite man-jumping";
+    manHitbox.classList.add("jumping");
 }
 
 function slash() {
@@ -191,6 +192,7 @@ function slash() {
 
 function duck() {
     man.className = "sprite man-ducking";
+    manHitbox.classList.add("ducking");
 }
 
 function decoratedAction(action, event)
