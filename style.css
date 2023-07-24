@@ -415,7 +415,7 @@ body {
 
 #multiplier {
     position: absolute;
-    bottom: 5px;
+    top: 95vh;
     left: 5px;
     width: 50vw;
     height: 3px;
@@ -434,7 +434,7 @@ body {
     display: flex;
     justify-content: space-between;
     position: absolute;
-    bottom: 12px;
+    top: 90vh;
     left: 5px;
     width: 50vw;
     font-size: 2vw;
