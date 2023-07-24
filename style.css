@@ -326,7 +326,7 @@ body {
     width: 50%;
     height: 33%;
     background-color: rgba(0, 0, 0, 0.1);
-    border: #00ccff55 5px solid;
+    border: #00ccff55 2px solid;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -335,7 +335,8 @@ body {
 }
 
 #jump {
-    top: 33%;
+    top: 20%;
+    height: 46%;
 }
 
 #duck {
@@ -343,8 +344,8 @@ body {
 }
 
 #slash {
-    top: 33%;
-    height: 66%;
+    top: 20%;
+    height: 80%;
     left: 50%;
 }
 
