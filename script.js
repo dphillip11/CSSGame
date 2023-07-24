@@ -116,10 +116,11 @@ var bitcoinHitbox = document.getElementById("bitcoin_hitbox");
 var launchedObject;
 var baseMovementSpeed = 80;
 var maxSpeed = 200;
+var movementSpeed = baseMovementSpeed;
 
 function SetRandomMovementSpeed() {
     var extraSpeed = GetRandom(0, (multiplier * score) / 4)
-    var movementSpeed = math.min(baseMovementSpeed + extraSpeed, maxSpeed);
+    movementSpeed = Math.min(baseMovementSpeed + extraSpeed, maxSpeed);
 }
 
 function LaunchObject() {
