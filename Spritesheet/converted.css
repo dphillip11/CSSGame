@@ -1,10 +1,27 @@
 .sprite {
-    /* background-image: url("../Textures/spritesheet.png");
-    background-size: 100% 100%; */
+    background-image: url("../Textures/spritesheet.png");
+    background-size: 100vw 100vh;
     border: red 1px solid;
 }
 
-body {
+#controls {
+    display: flex;
+    flex-direction: row;
+}
+
+.control {
+    padding: 3px;
+    border: blue 1px solid;
+    margin: 3px;
+}
+
+#test {
+    background-position: 0% 0%;
+    width: 0%;
+    height: 0%;
+}
+
+#sprites {
     height: 100vh;
     width: 100vw;
     background-image: url("../Textures/spritesheet.png");
@@ -12,121 +29,91 @@ body {
 }
 
 .heart {
-    position: absolute;
-    left: 24.37%;
-    top: 2.14%;
-    width: 6.93%;
-    height: 10.77%;
+    width: 8%;
+    height: 12%;
+    background-position: 26% 2%;
 }
 
 .whale {
-    position: absolute;
-    left: 35.01%;
-    top: 1.49%;
-    width: 21.03%;
-    height: 14.95%;
+    width: 22%;
+    height: 18%;
+    background-position: 44% 0%;
 }
 
 .big-water {
-    position: absolute;
-    left: 57.30%;
-    top: 2.14%;
-    width: 4.79%;
-    height: 4.83%;
+    width: 6%;
+    height: 6%;
+    background-position: 60% 2%;
 }
 
 .small-water {
-    position: absolute;
-    left: 64.67%;
-    top: 3.71%;
-    width: 1.26%;
-    height: 2.04%;
+    width: 6%;
+    height: 6%;
+    background-position: 66% 2%;
 }
 
 .cloud {
-    position: absolute;
-    left: 72.54%;
-    top: 3.44%;
-    height: 14.11%;
-    width: 15.68%;
+    width: 16%;
+    height: 18%;
+    background-position: 86% 2%;
 }
 
 .seagull {
-    position: absolute;
-    left: 23.55%;
-    top: 25.63%;
-    height: 7.61%;
-    width: 8.88%;
+    width: 10%;
+    height: 8%;
+    background-position: 26% 28%;
 }
 
 .bitcoin {
-    position: absolute;
-    left: 50.19%;
-    top: 24.42%;
-    height: 5.66%;
-    width: 3.78%;
+    width: 6%;
+    height: 6%;
+    background-position: 52% 26%;
 }
 
 .bitcoin-broken {
-    position: absolute;
-    left: 63.41%;
-    top: 24.42%;
-    height: 9.10%;
-    width: 4.97%;
+    width: 8%;
+    height: 10%;
+    background-position: 68% 26%;
 }
 
 .land {
-    position: absolute;
-    left: 70.40%;
-    top: 43.92%;
-    width: 28.59%;
-    height: 19.68%;
+    width: 32%;
+    height: 20%;
+    background-position: 104% 54%;
 }
 
 .man-standing {
-    position: absolute;
-    left: 1.13%;
-    top: 44.43%;
-    width: 11.59%;
-    height: 19.03%;
+    width: 14%;
+    height: 20%;
+    background-position: 0% 54%;
 }
 
 .man-ducking {
-    position: absolute;
-    left: 49.43%;
-    top: 46.70%;
-    width: 12.97%;
-    height: 14.76%;
+    width: 14%;
+    height: 20%;
+    background-position: 57% 52%;
 }
 
 .man-jumping {
-    position: absolute;
-    left: 15.87%;
-    top: 44.57%;
-    width: 12.53%;
-    height: 16.25%;
+    width: 14%;
+    height: 20%;
+    background-position: 18% 56%;
 }
 
 .man-slashing {
-    position: absolute;
-    left: 33.00%;
-    top: 42.43%;
-    width: 12.53%;
-    height: 19.22%;
+    width: 14%;
+    height: 20%;
+    background-position: 38% 52%;
 }
 
 .waves-back {
-    position: absolute;
-    left: 1.70%;
-    top: 74.47%;
-    width: 47.67%;
-    height: 23.68%;
+    width: 47%;
+    height: 24%;
+    background-position: 4% 96%;
 }
 
 .waves-front {
-    position: absolute;
-    left: 51.13%;
-    top: 81.99%;
-    height: 15.97%;
-    width: 47.10%;
+    width: 47%;
+    height: 22%;
+    background-position: 97% 97%;
 }
