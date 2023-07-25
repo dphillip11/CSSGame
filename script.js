@@ -1,4 +1,4 @@
-var DEBUG = true;
+var DEBUG = false;
 
 function showDebug() {
     if (DEBUG) {
@@ -77,7 +77,7 @@ function GetRandom(min, max) {
 }
         
 var man = document.getElementById("man");
-var whale = document.getElementById("whale");
+var whale = document.getElementById("whale-container");
 var seagull = document.getElementById("seagull");
 var bitcoin = document.getElementById("bitcoin");
 var brokenBitcoin = document.getElementById("broken-bitcoin");
@@ -86,7 +86,7 @@ function ResetPosition(object)
 {
     object.style.left = "150%";
     if (object == seagull)
-        object.style.top = "40%";
+        object.style.top = "50%";
 }
 
 function ResetGame() {
@@ -146,7 +146,7 @@ function moveLaunchedObject(distance) {
     }
     if (launchedObject == seagull)
     {
-        var y = 15;
+        var y = 25;
         var descent = 20 - x/2;
         if (descent > 0)
             y += descent;

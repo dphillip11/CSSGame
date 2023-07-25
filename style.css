@@ -38,8 +38,8 @@
 
 #man {
     position: absolute;
-    bottom: 180px;
-    left: 0;
+    bottom: 20%;
+    left: -2%;
 }
 
 /* flash different hues */
@@ -79,18 +79,13 @@
 
 .hitbox {
     position: absolute;
-    top: 30%;
-    left: 50%;
+    top: 15%;
+    left: 55%;
     width: 42.5%;
-    height: 70%;
+    height: 80%;
     border: 1px solid var(--border-color);
 }
 
-.slashing {
-    top: 20%;
-    left: 0%;
-    height: 80%;
-}
 
 .jumping {
     height: 60%;
@@ -98,6 +93,7 @@
 
 .ducking {
     height: 60%;
+    top: 40%;
 }
 
 .hurtbox {
@@ -110,12 +106,20 @@
     display: none;
 }
 
+#whale-container {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 #whale_hitbox {
     position: absolute;
-    top: 5%;
-    left: 12.5%;
-    width: 35%;
-    height: 60%;
+    bottom: 12%;
+    left: 8%;
+    width: 12%;
+    height: 16%;
     border: 1px solid var(--border-color);
 }
 
@@ -139,13 +143,16 @@
 
 #land {
     position: absolute;
-    bottom: 0;
-    left: -3px;
+    bottom: -5%;
+    left: 16%;
+    scale: 1.5 0.75;
+
 }
 
 #waves-front,
 #waves-back {
-
+    position: absolute;
+    bottom: 0;
     animation: wavesBack 5s linear infinite;
 }
 
@@ -155,15 +162,15 @@
 
 @keyframes wavesFront {
     0% {
-        transform: translateY(0%);
+        transform: translateY(22%);
     }
 
     50% {
-        transform: translateY(5%);
+        transform: translateY(30%);
     }
 
     100% {
-        transform: translateY(0%);
+        transform: translateY(22%);
     }
 }
 
@@ -173,15 +180,15 @@
 
 @keyframes wavesBack {
     0% {
-        transform: translateY(-5%);
+        transform: translateY(10%);
     }
 
     50% {
-        transform: translateY(5%);
+        transform: translateY(20%);
     }
 
     100% {
-        transform: translateY(-5%);
+        transform: translateY(10%);
     }
 }
 
@@ -212,21 +219,21 @@
 
 #whale {
     position: absolute;
-    bottom: 40px;
-    left: 20%;
+    bottom: 2%;
+    left: 0%;
 }
 
 #big-water {
     position: absolute;
-    top: -23%;
-    left: 28%;
+    bottom: 26%;
+    left: 12%;
     animation: water1 5s linear infinite;
 }
 
 #small-water {
     position: absolute;
-    top: -7%;
-    left: 36%;
+    bottom: 26%;
+    left: 12%;
     animation: water2 5s linear infinite;
 }
 
@@ -249,6 +256,10 @@
         opacity: 0;
     }
 
+    20% {
+        opacity: 1;
+    }
+
     33% {
         opacity: 1;
     }
@@ -265,28 +276,27 @@
 }
 
 .man-slashing {
-    scale: 0.95;
-    transform: translate(50%, 10%);
+    transform: translate(25%, 5%);
 }
 
 .man-jumping {
-    transform: translateY(-20%);
+    /* transform: translateY(-20%); */
 }
 
 .man-ducking {
-    transform: translateY(20%);
+    transform: translateY(10%);
 }
 
 
 #bitcoin {
     position: absolute;
-    top: 42.5%;
+    top: 50%;
     left: 110%;
 }
 
 #broken-bitcoin {
     position: absolute;
-    top: 42.5%;
+    top: 50%;
     left: 110%;
 }
 
@@ -347,13 +357,19 @@
 
 
 #heart-container {
-    width: 40%;
-    height: 10%;
-    max-height: 10%;
+    width: 40vw;
+    height: 10vw;
+    max-height: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1%;
+}
+
+#heart {
+    height: 12.5vh;
+    width: 12.5vw;
+    background-size: 110vw 110vh;
 }
 
 #notification {
