@@ -1,0 +1,132 @@
+.sprite {
+    /* background-image: url("../Textures/spritesheet.png");
+    background-size: 100% 100%; */
+    border: red 1px solid;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-image: url("../Textures/spritesheet.png");
+    background-size: 100vw 100vh;
+}
+
+.heart {
+    position: absolute;
+    left: 24.37%;
+    top: 2.14%;
+    width: 6.93%;
+    height: 10.77%;
+}
+
+.whale {
+    position: absolute;
+    left: 35.01%;
+    top: 1.49%;
+    width: 21.03%;
+    height: 14.95%;
+}
+
+.big-water {
+    position: absolute;
+    left: 57.30%;
+    top: 2.14%;
+    width: 4.79%;
+    height: 4.83%;
+}
+
+.small-water {
+    position: absolute;
+    left: 64.67%;
+    top: 3.71%;
+    width: 1.26%;
+    height: 2.04%;
+}
+
+.cloud {
+    position: absolute;
+    left: 72.54%;
+    top: 3.44%;
+    height: 14.11%;
+    width: 15.68%;
+}
+
+.seagull {
+    position: absolute;
+    left: 23.55%;
+    top: 25.63%;
+    height: 7.61%;
+    width: 8.88%;
+}
+
+.bitcoin {
+    position: absolute;
+    left: 50.19%;
+    top: 24.42%;
+    height: 5.66%;
+    width: 3.78%;
+}
+
+.bitcoin-broken {
+    position: absolute;
+    left: 63.41%;
+    top: 24.42%;
+    height: 9.10%;
+    width: 4.97%;
+}
+
+.land {
+    position: absolute;
+    left: 70.40%;
+    top: 43.92%;
+    width: 28.59%;
+    height: 19.68%;
+}
+
+.man-standing {
+    position: absolute;
+    left: 1.13%;
+    top: 44.43%;
+    width: 11.59%;
+    height: 19.03%;
+}
+
+.man-ducking {
+    position: absolute;
+    left: 49.43%;
+    top: 46.70%;
+    width: 12.97%;
+    height: 14.76%;
+}
+
+.man-jumping {
+    position: absolute;
+    left: 15.87%;
+    top: 44.57%;
+    width: 12.53%;
+    height: 16.25%;
+}
+
+.man-slashing {
+    position: absolute;
+    left: 33.00%;
+    top: 42.43%;
+    width: 12.53%;
+    height: 19.22%;
+}
+
+.waves-back {
+    position: absolute;
+    left: 1.70%;
+    top: 74.47%;
+    width: 47.67%;
+    height: 23.68%;
+}
+
+.waves-front {
+    position: absolute;
+    left: 51.13%;
+    top: 81.99%;
+    height: 15.97%;
+    width: 47.10%;
+}
