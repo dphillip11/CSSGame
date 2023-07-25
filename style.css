@@ -20,6 +20,7 @@
     position: fixed;
     top: 0;
     left: 0;
+    overflow: hidden;
 }
 
 #restart {
@@ -144,10 +145,7 @@
 
 #waves-front,
 #waves-back {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
+
     animation: wavesBack 5s linear infinite;
 }
 
