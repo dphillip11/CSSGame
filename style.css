@@ -111,7 +111,7 @@
     height: 100vh;
     position: absolute;
     top: 0;
-    left: 0;
+    left: 110%;
 }
 
 #whale_hitbox {
@@ -209,11 +209,11 @@
 
 @keyframes cloud {
     0% {
-        transform: translateX(1200px);
+        transform: translateX(200vw);
     }
 
     100% {
-        transform: translateX(-500px);
+        transform: translateX(-40vw);
     }
 }
 

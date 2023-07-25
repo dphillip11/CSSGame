@@ -1,5 +1,5 @@
 .sprite {
-    background-image: url("../Textures/spritesheet.png");
+    background-image: url("spritesheet.png");
     background-size: 220vw 220vh;
     scale: 1 0.70;
 }
