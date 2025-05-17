@@ -1,1 +1,1 @@
-Play here: [https://dphillip11.github.io/CSSGame/]
+[Play the CSS Game](https://dphillip11.github.io/CSSGame)
